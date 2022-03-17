@@ -21,7 +21,13 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "tt-mfe-mfe-one": [
+        "dist/tt-mfe-mfe-one/tt-mfe-mfe-one",
+        "dist/tt-mfe-mfe-one"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

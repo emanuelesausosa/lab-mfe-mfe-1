@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-lab": {
+    "lab-mfe-mfe-1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,12 +15,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "lab",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-lab",
+            "outputPath": "dist/lab-mfe-mfe-1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-lab:build:production"
+              "browserTarget": "lab-mfe-mfe-1:build:production"
             },
             "development": {
-              "browserTarget": "my-lab:build:development"
+              "browserTarget": "lab-mfe-mfe-1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-lab:build"
+            "browserTarget": "lab-mfe-mfe-1:build"
           }
         },
         "test": {
@@ -105,7 +105,38 @@
           }
         }
       }
+    },
+    "tt-mfe-mfe-one": {
+      "projectType": "library",
+      "root": "projects/tt-mfe-mfe-one",
+      "sourceRoot": "projects/tt-mfe-mfe-one/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/tt-mfe-mfe-one/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tt-mfe-mfe-one/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/tt-mfe-mfe-one/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tt-mfe-mfe-one/src/test.ts",
+            "tsConfig": "projects/tt-mfe-mfe-one/tsconfig.spec.json",
+            "karmaConfig": "projects/tt-mfe-mfe-one/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "my-lab"
+  "defaultProject": "lab-mfe-mfe-1"
 }

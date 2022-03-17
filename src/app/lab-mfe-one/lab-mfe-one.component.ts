@@ -10,6 +10,7 @@ export class LabMfeOneComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("hello from labMfe component");
   }
 
 }

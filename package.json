@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build tt-mfe-mfe-one",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "publish-package": "ng build tt-mfe-mfe-one --prod && cd dist/tt-mfe-mfe-one && npm publish"
   },
   "private": true,
   "dependencies": {

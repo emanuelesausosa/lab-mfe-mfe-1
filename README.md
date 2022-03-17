@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Publish package
+
+1) Git checkout main, git fetch, git pull
+2) git tag -a X.Y.Z -m "vX.Y.Z"
+3) git push origin --tags
+4) Go to https://...
+5) Tag version -vX.Y.Z, Branch main
+- Release title: vX.Y.Z
+- Description: (Paste the generated CHANGELOG markdown)
+- Click the "Publish release" button. Verify that new release shows in Github repository page
+- Checkout latest main: git checkout  main && git pull 
+- Run `yarn run publish-package`
